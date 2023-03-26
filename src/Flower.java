@@ -8,7 +8,6 @@ public class Flower {
         this.price = price;
         this.weight = weight;
     }
-
     public String getName() {
         return name;
     }

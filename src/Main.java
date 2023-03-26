@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class main {
+public class Main {
     public static void main(String[] args) {
         Flower rose = new Flower("Rose", 2.99, 100);
         Flower daisy = new Flower("Daisy", 1.99, 70);

@@ -15,7 +15,6 @@ public class Bouquet {
         return FlowerShop.calculateBouquetWeight(flowers);
     }
 
-
     public Flower[] findMostExpensiveFlowers() {
         double maxPrice = Double.MIN_VALUE;
         int count = 0;
