@@ -1,12 +1,22 @@
-import java.util.List;
+
 
 public class Bouquet {
     private Flower[] flowers;
-
+    public Bouquet(){}
     public Bouquet(Flower[] flowers) {
         this.flowers = flowers;
     }
-
+    // Блок инициализации
+    {
+        flowers = new Flower[0];
+    }
+    public Bouquet(Bouquet other) {
+        // Копирование массива цветов
+        this.flowers = new Flower[other.flowers.length];
+        for (int i = 0; i < other.flowers.length; i++) {
+            this.flowers[i] = new Flower(other.flowers[i]);
+        }
+    }
     public double getPrice() {
         return FlowerShop.calculateBouquetPrice(flowers);
     }
@@ -14,6 +24,7 @@ public class Bouquet {
     public double getWeight() {
         return FlowerShop.calculateBouquetWeight(flowers);
     }
+
 
     public Flower[] findMostExpensiveFlowers() {
         double maxPrice = Double.MIN_VALUE;
